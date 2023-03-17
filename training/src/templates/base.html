@@ -108,8 +108,8 @@
               <li class="nav-item cta"><a href="{% url 'accounts:mydata' %}" class="nav-link">بياناتي</a></li>  
               <li class="nav-item cta"><a href="{% url 'accounts:logged_out' %}" class="nav-link">تسجيل خروج</a></li>  
               {% comment %} <li><a  style="color: red" href="{% url 'share:share_list' %}">حشد المصادر</a></li> {% endcomment %}
-              <li><a  style="color: red" href="{% url 'accounts:my_share' %}"> الانجاز</a></li>
-              <li><a style="color: red" href="{% url 'tasksinfo:tasksinfo' %}">المهام</a></li>
+              {% comment %} <li><a  style="color: red" href="{% url 'accounts:my_share' %}"> الانجاز</a></li> {% endcomment %}
+              {% comment %} <li><a style="color: red" href="{% url 'tasksinfo:tasksinfo' %}">المهام</a></li> {% endcomment %}
 
             {% else %}
               <li class="nav-item cta"><a href="{% url 'login' %}" class="nav-link"><span>دخول</span></a></li>
@@ -123,14 +123,14 @@
              <li><a class="active" href="{% url 'login' %}"> signup </a></li> 
              -->  
              {% comment %} <li><a  style="color: blue" href="{% url 'about:contactus' %}">تواصل معي</a></li> {% endcomment %}
-             <li><a  style="color: blue" href="{% url 'about:contactme' %}">تواصل معي</a></li>
+             {% comment %} <li><a  style="color: blue" href="{% url 'about:contactme' %}">تواصل معي</a></li> {% endcomment %}
               {% comment %} <li><a href="{% url 'tasksinfo:tasksinfo' %}">المهام</a></li> {% endcomment %}
-              <li><a href="{% url 'blog:main_skills' %}">المهارات</a></li>
+              {% comment %} <li><a href="{% url 'blog:main_skills' %}">المهارات</a></li> {% endcomment %}
               {% comment %} <li><a href="{% url 'about:trainer' %}">المدربين</a></li> {% endcomment %}
-              <li><a href="{% url 'about:training_idea' %}">فكرة بيئة التدريب</a></li>
+              {% comment %} <li><a href="{% url 'about:training_idea' %}">فكرة بيئة التدريب</a></li> {% endcomment %}
               
               {% comment %} <li><a href="{% url 'share:share_list' %}">حشد المصادر</a></li> {% endcomment %}
-              <li><a href="{% url 'share:all_list' %}">حشد المصادرAll</a></li>
+              {% comment %} <li><a href="{% url 'share:all_list' %}">حشد المصادرAll</a></li> {% endcomment %}
 
               <li><a class="active" href="{% url 'blog:post_list' %}">الرئيسية</a></li>
     
