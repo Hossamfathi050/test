@@ -1,0 +1,200 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load bootstrap4 %}
+
+{% block body %}
+
+
+
+<div dir="rtl">
+    <!-- Search -->
+    <div class="catagory_area ">
+        <div class="container " style="margin-top: 7rem">
+
+            <div class=" single_text">
+                <br>
+                <center>
+                    <h5 style="color:red; font-weight: 600;">
+                        هذا الجزء من الموقع هدفه التنمية المهنية وتبادل الافكار في حشد المصادر
+                        وهذه المشاركات أحد مصادر حشد المصادر
+                        <br>
+                        لذا يرجى التأكد منها لتعم الفائدة
+                          </center> 
+                             </h5>
+                             <center>
+                        <a href="{% url 'share:insert' %}" <button type="button" class="btn btn-info"></button>
+                            اضافة مشاركة - حشد المصادر</a>
+
+                        </center>
+             
+                <hr>
+
+
+                </center>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.rtl.min.css"
+    integrity="sha384-mUkCBeyHPdg0tqB6JDd+65Gpw5h/l8DKcCTV2D2UpaMMFd7Jo8A+mDAosaWgFBPl" crossorigin="anonymous">
+
+<center>
+
+
+
+     <table class="table table-hover" class="table" style="width: 90%;" </table> <thead>
+ <!-- <table class="table" style="width: 99%">-->
+
+ 
+        <thead class="table-Warning"">
+
+            <tr style="color:red;">
+
+                <th  class="table-danger" class="table-active" style="text-align:center" scope="col"> مشاركة بواسطة</th>
+
+                <th  class="table-Light" style="text-align:center" scope="col">التعليق</th>
+                <th  class="table-danger" style="text-align:center" scope="col">العنوان</th>
+
+                <th  class="table-Light" style="text-align:center" scope="col">المجال</th>
+           <th style="text-align:center" scope="col">م</th>
+
+            </tr>
+
+    {% for share in user_share %}
+  
+
+        <tbody>
+            <b>
+                <tr>
+                     <td  class="table-Light" style="text-align:right" style="font-weight: 600;">Mr.  {{ share.author_name }}</td>
+                     <td  class="table-Light" style="text-align:right" style="font-weight: 600;">Mr.  {{ share.author }}</td>
+                     <td  class="table-Light" style="text-align:right" style="font-weight: 600;">{{ share.description }}</td>
+
+                    <td  class="table-Light" style="text-align:center" style="font-weight: 600;">{{ share.share_title }}</td>
+                    <td  class="table-Light" style="text-align:center" style="font-weight: 600;"> Time :{{ share.created_at }}</td>
+
+
+                    <td  class="table-Light" style="text-align:center ; font-weight: 600;">{{ share.share_category }}</td>
+                   <!--   <td style="text-align:center ; font-weight: 600;">{{ share.id }}</td> -->
+
+                </tr>
+            </b>
+        </tbody>
+        {% endfor %}
+
+    </table>
+ 
+
+
+
+
+
+
+    
+</center>
+ 
+
+<!--   Code  Pageinaion
+
+<center>
+    {% if is_paginated %}
+    <div class="row mt-5">
+        <div class="col text-center">
+            <div class="block-27">
+                <ul>
+                    <center>
+
+                    {% if page_obj.has_previous %}
+                    <li><a href="?page={{page_obj.previous_page_number}}">&lt;</a>
+                    </li>
+                    {% else %}
+                    <li class="disabled"><span>&lt;</span></li>
+                    {% endif %}
+
+
+                    {% for i in paginator.page_range %}
+
+                    {% if page_obj.number == i %}
+                    <li class="active"><span>{{i}}</span></li>
+                    {% else %}
+                    <li><a href="?page={{i}}">{{i}}</a></li>
+                    {% endif %}
+
+                    {% endfor %}
+
+                    {% if  page_obj.has_next %}
+                    <li><a href="?page={{page_obj.next_page_number}}">&gt;</a>
+                    </li>
+                    {% else %}
+                    <li class="disabled"><span>&gt;</span></li>
+                    {% endif %}
+
+                </center>
+
+
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+
+
+</center>
+
+ -->
+
+{% endblock body %}
+
+
+
+
+<!--
+
+     <table class="table table-striped" style="width: 88%"> 
+            <thead>
+              <tr>
+              <th scope="col">الموجه الفني للحاسوب</th>
+              <th scope="col">عدد الفصول</th>
+              <th scope="col">عدد الطلاب</th>
+              <th scope="col">الصف</th>
+
+              <th scope="col">النوع</th>
+              <th scope="col">المرحلة</th>
+              <th scope="col">المدرسة</th>
+              <th scope="col">م</th>
+
+            </tr>
+          </thead>
+
+
+
+  <tbody>
+        {% for sc_details in object_list %}
+
+
+                    <tr>
+                      <th scope="row">{{ sc_details.detail_supername }}</th>
+                      <td>{{ sc_details.detail_stu_suc }}</td>
+                      <td>{{ sc_details.detail_stu_tot }}</td>
+                      <td>{{ sc_details.detail_grade }}</td>
+                      <td>{{ sc_details.detail_schooltype }}</td>
+                      <td>{{ sc_details.detail_schoolstage }}</td>
+                      <td>{{ sc_details.detail_schoolname }}</td>
+                      <td>{{ sc_details.id }}</td>
+                   
+
+                    </tr>
+ 
+        {% endfor %}
+
+    </tbody>
+    </table>
+
+-->

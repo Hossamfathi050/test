@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load bootstrap4 %}
+{% block body %}
+  
+<main id="main">
+    <center>
+  
+      <div class="breadcrumbs" data-aos="fade-in">
+        <div class="container">
+      <h2>   <b>تم تسجيل خروجكم بنجاح</b></h2>
+          <br>
+  
+           <h3 style="color: yellow"><b>في انتظاركم لاستكمال المهام ... مع الشكر </b> </h3>
+        </b>
+      </div>   
+    </div>   
+  
+   
+
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-md-6 mx-auto">
+          
+        <h4>Logged out!</h4>  
+       <h4> <b><a href="{% url 'login'%}">Click here to login again- اضغط هنا لاعادة الدخول للموقع.</a></b></h4>
+
+        </div>
+    </div>
+</div>
+
+
+{% endblock body %}

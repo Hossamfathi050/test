@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{% load static %}
+{% block body %}
+
+<div class="row">
+    <div class="col-md-6 mx-auto mt-5 mb-5">
+		<center>
+	
+			<br>
+			<main id="main">
+			  <center>
+				<section id="pricing" class="pricing">
+				  <div class="container" data-aos="fade-up">
+			
+					<div class="row">
+			
+					  <div class="col-lg-12 col-md-6">
+						<center>
+						  <div class="box featured">
+							<h3>بيانات المستخدم - نظام بيئة التدريب الإلكترونية</h3>
+							<br>
+							<h2 style="color: red;">   {{profile.user.username}} === اسم المستخدم</h2>
+							<span style="color: blue;">=================</span>
+							<br>
+							<h2 style="color: green;">  نمط حشد المصادر === {{profile.style_traning}} 	</h2>
+
+	  <span style="color: blue;">=================</span>
+
+	  <br>
+	  البريد الإلكتروني
+	  <br>
+	  <span style="color: blue;">{{profile.user.email}}</span>
+			  
+			  <br>
+			  
+			  رقم الهاتف
+			  <br>
+			  <span style="color: blue;"> {{profile.phone_number}}	</span>
+	  
+			  <br>
+		مركز العمل
+		<br>
+		<span style="color: red;"> {{profile.school}}	</span>
+	  
+			   
+			
+							</ul>
+							<div class="btn-wrap">
+							  <a href="/" class="btn-buy">عودة للرئيسية</a>
+							  <br>
+							  <a href="#" class="btn-get-started">يمكنك استخدام الشات بوت عند الحاجة</a>
+			
+							</div>
+						  </div>
+					  </div>
+			  </center>
+			  </div>
+			  </div>
+			  </div>
+			  </div>
+			
+			
+			  </center>
+
+
+ 
+        
+    </div>
+</div>
+
+
+
+{% endblock %}
