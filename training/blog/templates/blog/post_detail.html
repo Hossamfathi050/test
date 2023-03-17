@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load bootstrap4 %}
+
+{% block body %}
+
+
+
+
+<!-- ======= Hero Section ======= -->
+<!--
+
+
+
+
+<section id="hero" class="d-flex justify-content-center align-items-center">
+    <div class="container position-relative" data-aos="zoom-in" data-aos-delay="100">
+        <h1>تنمية مهارات التحول الرقمي<br>للمعلمين والمعلمات</h1>
+        <h2>تدريب الإلكتروني قائم على تقنية الذكاء الإصطناعي</h2>
+
+        <a href="#" class="btn-get-started">استخدم الشات بوت عند الحاجة</a>
+    </div>
+    -->
+
+
+</section><!-- End Hero section-->
+
+<br><br>
+
+
+
+<main id="main">
+  <center>
+    <section id="pricing" class="pricing">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+
+          <div class="col-lg-12 col-md-6">
+            <center>
+              <div class="box featured">
+                <h3> {{post.skills_category}}</h3>
+                <h5 style="color: red"><b> {{post.title}} </b></h5>
+                <ul>
+                  <li> {{post.description}} </li>
+                  <li class="na"> {{post.arrang_post}} </li>
+
+                </ul>
+                <div class="btn-wrap">
+                  <a href="/" class="btn-buy">عودة للرئيسية</a>
+                  <br>
+                  <a href="#" class="btn-get-started">يمكنك استخدام الشات بوت عند الحاجة</a>
+
+                </div>
+              </div>
+          </div>
+  </center>
+  </div>
+  </div>
+  </div>
+  </div>
+
+
+  </center>
+
+
+
+
+
+
+  </div>
+  </section><!-- End Why Us Section -->
+
+
+</main>
+<!-- End #main -->
+>
+
+{% endblock body %}

@@ -1,0 +1,118 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load bootstrap4 %}
+
+{% block body %}
+
+
+
+
+  <!-- ======= Hero Section ======= -->
+
+  <section id="hero" class="d-flex justify-content-center align-items-center">
+    <div class="container position-relative" data-aos="zoom-in" data-aos-delay="100">
+      <h1>تنمية مهارات التحول الرقمي<br>للمعلمين والمعلمات</h1>
+      <h2>تدريب الإلكتروني قائم على تقنية الذكاء الإصطناعي</h2>
+      <a href="#" class="btn-get-started">استخدم الشات بوت عند الحاجة</a>
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!--
+
+statr  tbl
+-->
+
+     <section class="blog_area section-padding">
+      <div class="container">
+
+        <div class="row">
+          <div class="blog_left_sidebar">
+            <article class="blog_item">
+              <div class="blog_details">             
+                <table class="table table-striped">
+                  <center>
+                    <thead>
+                      <tr>
+                        <th scope="col">التفاصيل</th>
+                        <th scope="col">وصف المهمه</th>
+                        <th scope="col">العنوان</th>
+                        <th scope="col">المهارة الرئيسية</th>
+
+                         <th scope="col">م</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {% for post in object_list %}
+                      <tr>
+                        <td>    <a href="{{post.get_absolute_url}}"> <span style="color: blue;">التفاصيل</span></a></td>
+
+                        <td>{{post.description}}</td>
+                        <td>{{post.title}}</td>
+                        <td>{{post.skills_category}}</td>
+
+                        <th scope="row">{{post.arrang_post}}</th>
+                      </tr>
+                      {% endfor %}
+                    </tbody>
+                  </center>
+                </table>
+                <!--
+
+ 
+
+              </div>
+    </section><!-- End Why Us Section -->
+
+
+  </main>
+  <!-- End #main -->
+
+  <center>
+    {% if is_paginated %}
+    <div class="row mt-5">
+        <div class="col text-center">
+            <div class="block-27">
+                <ul>
+                    <center>
+
+                    {% if page_obj.has_previous %}
+                    <li><a href="?page={{page_obj.previous_page_number}}">&lt;</a>
+                    </li>
+                    {% else %}
+                    <li class="disabled"><span>&lt;</span></li>
+                    {% endif %}
+
+
+                    {% for i in paginator.page_range %}
+
+                    {% if page_obj.number == i %}
+                    <li class="active"><span>{{i}}</span></li>
+                    {% else %}
+                    <li><a href="?page={{i}}">{{i}}</a></li>
+                    {% endif %}
+
+                    {% endfor %}
+
+                    {% if  page_obj.has_next %}
+                    <li><a href="?page={{page_obj.next_page_number}}">&gt;</a>
+                    </li>
+                    {% else %}
+                    <li class="disabled"><span>&gt;</span></li>
+                    {% endif %}
+
+                </center>
+
+
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+
+
+</center>
+
+{% endblock body %}

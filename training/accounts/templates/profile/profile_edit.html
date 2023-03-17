@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% load static %}
+{% load bootstrap4 %}
+{% block body %}
+<div class="hero-wrap js-fullheight" style="background-image: url({% static 'images/bg_5.jpg' %});">
+	<div class="overlay"></div>
+	<main id="main">
+		<center>
+	  
+			<div class="breadcrumbs" data-aos="fade-in">
+				<div class="container">
+					<br>
+					<br>
+					<br>
+		  
+		  <h2>   <b>مرحبا بكم في بيئة التدريب الإلكترونية </b></h2>
+			  <br>
+	  
+			   <h3 style="color: yellow"><b>تذكر بياناتك للاهمية </b> </h3>
+			</b>
+		  </div>   
+		</div>   
+				 
+				<span style="color: blue;">=================</span>
+
+				<h2 style="color: green;">  حشد المصادر 	</h2>
+		  
+				<h2 style="color: green;">  {{profile.style_traning}} 	</h2>
+		  
+		  
+				<span style="color: blue;">=================</span>
+		  
+				  <br>			</div>
+
+{% comment %} hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh {% endcomment %}
+
+
+
+
+				  
+		</div>
+	</div>
+</div>
+<div class="row">
+    <div class="col-md-4 mx-auto mt-5 mb-5">
+        <form action="" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            {% bootstrap_form user_form %}
+            {% bootstrap_form profile_form %}
+            {% buttons %}
+                <button type="submit" class="btn btn-primary py-3">Edit My Profile</button>
+            {% endbuttons %}
+        
+        </form>
+    </div>
+</div>
+
+
+ {% endblock %}
