@@ -1,6 +1,6 @@
 from datetime import timezone
 from django.utils import timezone
-from django.utils.translation import ugettext_lazy as _
+# from django.utils.translation import ugettext_lazy as _
 # from django.utils.translation import ugettext_lazy as _
 from django.utils import timezone
 from django.contrib.auth.models import User
@@ -24,7 +24,7 @@ SKILLS_CAT=[
 class Post(models.Model):
     title = models.CharField(max_length=100)
     description  = models.TextField(max_length=15000)
-    skills_category = models.CharField(_("skills"),max_length=50,choices= SKILLS_CAT)
+    skills_category = models.CharField(max_length=50,choices= SKILLS_CAT)
     created_at = models.DateTimeField(default=timezone.now)
     slug = models.SlugField(null=True , blank=True)
 
