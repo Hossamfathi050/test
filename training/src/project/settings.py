@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-2ry5xgwma#6&k^_ad#ulyf+3tq%()xx+$trn(jl$qcy37-dor4
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['trainingok.herokuapp.com','127.0.0.1']
+ALLOWED_HOSTS = ['hossam-ai-training.herokuapp.com','127.0.0.1']
 
 
 # Application definition
