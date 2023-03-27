@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'import_export',
     'bootstrap4',
     'blog',
+    'share',
 ]
 
 MIDDLEWARE = [
