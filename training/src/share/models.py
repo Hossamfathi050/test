@@ -4,7 +4,7 @@ from django.utils import timezone
 from django.contrib.auth.models import User
 from django.utils.text import slugify
 from django.urls import reverse
-from django.utils.translation import ugettext_lazy as _
+# from django.utils.translation import ugettext_lazy as _
 
 
 SHARE_CAT=[
@@ -18,11 +18,11 @@ SHARE_CAT=[
 # Create your models here.
 class Share(models.Model):
     author = models.ForeignKey(User, related_name='user_share', on_delete=models.CASCADE)
-    author_name = models.CharField(_("الاسم"),max_length=15)
+    author_name = models.CharField(max_length=15)
 
-    share_title = models.CharField(_("العنوان"),max_length=50)
-    description  = models.TextField(_("التعليق-حشد المصادر"),max_length=500)
-    share_category = models.CharField(_("المجال"),max_length=50,choices= SHARE_CAT)
+    share_title = models.CharField(max_length=50)
+    description  = models.TextField(max_length=500)
+    share_category = models.CharField(max_length=50,choices= SHARE_CAT)
     slug = models.SlugField(null=True , blank=True)
     created_at = models.DateTimeField(default=timezone.now)  
  
