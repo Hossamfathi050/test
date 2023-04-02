@@ -62,8 +62,7 @@
                 <th  class="table-danger" style="text-align:center" scope="col">العنوان</th>
 
                 <th  class="table-Light" style="text-align:center" scope="col">المجال</th>
-           <th style="text-align:center" scope="col">م</th>
-
+ 
             </tr>
 
     {% for share in user_share %}
@@ -73,12 +72,9 @@
             <b>
                 <tr>
                      <td  class="table-Light" style="text-align:right" style="font-weight: 600;">Mr.  {{ share.author_name }}</td>
-                     <td  class="table-Light" style="text-align:right" style="font-weight: 600;">Mr.  {{ share.author }}</td>
                      <td  class="table-Light" style="text-align:right" style="font-weight: 600;">{{ share.description }}</td>
 
                     <td  class="table-Light" style="text-align:center" style="font-weight: 600;">{{ share.share_title }}</td>
-                    <td  class="table-Light" style="text-align:center" style="font-weight: 600;"> Time :{{ share.created_at }}</td>
-
 
                     <td  class="table-Light" style="text-align:center ; font-weight: 600;">{{ share.share_category }}</td>
                    <!--   <td style="text-align:center ; font-weight: 600;">{{ share.id }}</td> -->

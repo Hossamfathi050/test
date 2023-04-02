@@ -4,7 +4,7 @@ from django.urls import path
 # from .views import myproperty
 
 
-from .views import profile , profile_edit , signup ,logged_out
+from .views import profile , profile_edit , signup , my_share,logged_out
 
 
 
@@ -17,7 +17,7 @@ urlpatterns = [
     path('mydata',profile,name='mydata'),
     path('profile/',profile,name='profile'),
     path('profile/edit/', profile_edit , name='profile_edit') ,
-    # path('my_share', my_share , name='my_share') ,
+    path('my_share', my_share , name='my_share') ,
 
 
     # path('profile/myproperty', myproperty , name='myproperty') ,

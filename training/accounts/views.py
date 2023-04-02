@@ -6,7 +6,7 @@ from django.contrib.auth import authenticate, login
 from django.contrib import messages
 from django.contrib.auth import logout
 
-# from share.models import Share
+from share.models import Share
 
 
 
@@ -59,9 +59,9 @@ def profile_edit(request):
     })
 
 
-# def my_share(request):
-#     user_share = Share.objects.filter(author=request.user)
-#     return render(request,'profile/my_share.html' , {'user_share':user_share})
+def my_share(request):
+    user_share = Share.objects.filter(author=request.user)
+    return render(request,'profile/my_share.html' , {'user_share':user_share})
 
 
 
