@@ -5,7 +5,7 @@
 {% block body %}
 
 
-
+ 
 
 <!-- ======= Hero Section ======= -->
 <!--
@@ -40,16 +40,14 @@
             <center>
               <div class="box featured">
                 <h3> {{post.skills_category}}</h3>
-                <h5 style="color: red"><b> {{post.title}} </b></h5>
+                <h5 style="color: green"><b> {{post.title}} </b></h5>
                 <ul>
                   <li> {{post.description}} </li>
-                  <li class="na"> {{post.arrang_post}} </li>
+                  <li class="na"> fgdfgdfgfdgf{{post.arrang_post}} </li>
 
                 </ul>
 
-                <div id="disqus_thread"></div>
-
-
+      
 
 
                 <div class="btn-wrap">
@@ -60,6 +58,12 @@
                 </div>
               </div>
           </div>
+
+          <div id="disqus_thread"></div>
+
+          <h1>dklmlklkj;kl</h1>
+
+
   </center>
   </div>
   </div>
@@ -90,7 +94,7 @@
   *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
   
   var disqus_config = function () {
-  this.page.url = "http://127.0.0.1:8000/";  // Replace PAGE_URL with your page's canonical URL variable
+  this.page.url = "http://127.0.0.1:8000/{{post.get_absolute_url}}";  // Replace PAGE_URL with your page's canonical URL variable
   this.page.identifier = "{{post.slug}}"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
   };
   
