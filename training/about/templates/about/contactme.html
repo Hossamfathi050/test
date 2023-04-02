@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load bootstrap4 %}
+
+{% block body %}
+
+
+
+
+<div dir="rtl">
+    <!-- Search -->
+    <div class="catagory_area ">
+        <div class="container " style="margin-top: 5rem">
+            <br>
+            <div class=" single_text">
+
+             
+                <center>
+                    <center>
+                        <h5 style="color:red; font-weight: 600;">
+                          يسعدني التواصل معكم..... مع الشكر... تحياتي
+</h5>
+                    </center>                   
+                    </h4>
+                </center>
+                    <hr>
+
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+<!--{{ form.as_p }}-->
+<center>
+    <div style="width: 44% ">
+
+        <center>
+       
+            <form method="POST">
+                {% csrf_token %}
+                {% bootstrap_form form %}
+                {% buttons %}
+                <button type="submit" class="btn btn-primary">اضافة التعليق للتواصل</button>
+
+                {% endbuttons %}
+            </form>
+                </center>  
+
+    </div>
+
+</center>
+{% endblock body %}
